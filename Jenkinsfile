@@ -6,21 +6,21 @@ pipeline {
             steps {
                 //dir('/Users/edgarramirez/Documents/Andrea/ejemplo-maven'){
                     sh './mvnw clean compile -e'
-                }
+                //}
             }
         }
         stage('Test') {
             steps {
                 //dir('/Users/edgarramirez/Documents/Andrea/ejemplo-maven'){
                     sh './mvnw clean test -e'
-                }
+                //}
             }
         }
         stage('Jar') {
             steps {
                 //dir('/Users/edgarramirez/Documents/Andrea/ejemplo-maven'){
                     sh './mvnw clean package -e'
-                }
+                //}
             }
         }
         stage('SonarQube analysis') {
@@ -35,7 +35,7 @@ pipeline {
                 //dir('/Users/edgarramirez/Documents/Andrea/ejemplo-maven'){
                     sh 'nohup bash mvnw spring-boot:run &'
                     //sh './mvnw spring-boot:run'
-                }
+                //}
             }
         }
         stage('Testing') {
@@ -49,7 +49,7 @@ pipeline {
                         //final String response = sh(script: "curl -s $url", returnStdout: true).trim()
                         //echo response
                     //}
-                }
+                //}
             }
         }
     }
