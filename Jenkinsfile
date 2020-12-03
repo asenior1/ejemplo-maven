@@ -23,11 +23,11 @@ pipeline {
                 //}
             }
         }
-        stage('SonarQube analysis') {
+        stage('SonarQube') {
             steps {
                 script{
-                    withSonarQubeEnv(sonar){ 
-                        sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar -e'
+                    withSonarQubeEnv('sonar'){ 
+                        sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
                     }
                 }
             }
