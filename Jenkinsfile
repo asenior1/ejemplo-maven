@@ -1,7 +1,5 @@
 pipeline {
     agent any
-import jenkins.model.*
-jenkins = Jenkins.instance
  
     stages {
         stage('Compile') {
