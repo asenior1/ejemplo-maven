@@ -44,7 +44,7 @@ pipeline {
             steps {
                 //dir('/Users/edgarramirez/Documents/Andrea/ejemplo-maven'){
                     sleep 10
-                    sh 'curl http://localhost:8081/rest/mscovid/estadoMundial'
+                    sh 'curl http://localhost:8080/rest/mscovid/estadoMundial'
                     //script{
                         //sh 'curl -X GET 'http://localhost:8080/rest/mscovid/test?msg=testing''
                         //final String url = "http://localhost:8080/rest/mscovid/test?msg=testing"
